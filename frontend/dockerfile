@@ -3,9 +3,17 @@ FROM node:24-alpine AS build
 WORKDIR /app
 
 COPY package*.json ./
+#It installs dependencies exactly from package-lock.json.
 RUN npm ci
 
 COPY . .
+
+# Build-time env for Vite
+ARG VITE_BACKEND_URL
+ARG VITE_RAZOR_PAY_ID
+ENV VITE_BACKEND_URL=$VITE_BACKEND_URL
+ENV VITE_RAZOR_PAY_ID=$VITE_RAZOR_PAY_ID
+
 RUN npm run build
 
 # Nginx stage
