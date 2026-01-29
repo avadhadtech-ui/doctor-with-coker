@@ -1,0 +1,12 @@
+FROM node:24-alpine
+WORKDIR /app
+COPY package*.json .
+RUN npm install
+COPY . .
+<<<<<<< HEAD
+EXPOSE 4000
+CMD ["node", "server.js"]
+=======
+EXPOSE 5173
+CMD ["npm", "run","dev"]
+>>>>>>> 9a4e858120c82f5c37f48d45f1bc485cff22e415

@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+.active hr{
+    @apply block;
+}
+::-webkit-scrollbar{
+    width: 0px;
+}
+
+.par:hover > strong{
+    color: white;
+}
+.bor-class:nth-child(3){
+    border: 1px solid black;
+}
+@media only screen and (max-width:768px){
+    .active p {
+        @apply text-white bg-[var(--primary)]
+    }
+}
