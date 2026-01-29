@@ -7,7 +7,6 @@ const SpecialityMenu = () => {
   return (
     <div className='flex flex-col items-center gap-4 py-16 text-grey-800' id='speciality'>
             <h1 className='text-3xl font-medium text-grey-800'>Find by Speciality</h1>
-            <p className='w-[100] text-center text-sm text-[var(--grey)]'>Simply browse through our extensive list of trusted doctors, schedule your appointment hassle-free.</p>
             <div className='flex justify-around lg:justify-center gap-4 pt-5 w-[80vw] overflow-scroll'>
                     {
                         specialityData.map((detail, index)=>(

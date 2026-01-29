@@ -9,7 +9,6 @@ const TopDoctors = () => {
   return (
     <div className='flex flex-col items-center gap-4 my-10 text-grey-900 md:mx-5'>
             <h1 className='text-3xl font-medium'>Top Doctors to Book</h1>
-            <p className='w-[100] text-center text-sm'>Simply browse through our extensive list of trusted doctors.</p>
             <div className='w-full flex flex-wrap gap-4 pt-5 gap-y-6 px-0 justify-center'>
                 {               
                     doctors.slice(0,10).map((data)=>(
